@@ -1,4 +1,4 @@
-name: aae497-f19
+name: BoeingAero
 channels:
   - conda-forge
   - defaults
