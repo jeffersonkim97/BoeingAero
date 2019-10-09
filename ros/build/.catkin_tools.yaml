@@ -1,6 +1,0 @@
-devel_space: /home/kestrel1311/git/BoeingAero/ros/devel
-install: false
-install_space: /home/kestrel1311/git/BoeingAero/ros/install
-profile: default
-source_space: /home/kestrel1311/git/BoeingAero/ros/src
-workspace: /home/kestrel1311/git/BoeingAero/ros
