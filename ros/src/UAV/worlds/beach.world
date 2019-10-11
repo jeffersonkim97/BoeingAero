@@ -1,13 +1,13 @@
 <?xml version="1.0" ?>
 <sdf version="1.6">
   <world name="default">
-    <scene>
+    <!-- <scene>
       <sky>
         <clouds>
           <speed>12</speed>
         </clouds>
       </sky>
-    </scene>
+    </scene> -->
 
     <spherical_coordinates>
         <latitude_deg>29.4047089</latitude_deg>
@@ -22,8 +22,48 @@
 
     <include>
       <pose>0 0 0 0 0 0</pose>
-      <uri>model://beach_geography</uri>
+      <uri>model://beach1</uri>
     </include>
+
+    <model name="sea_level">
+      <static>true</static>
+      <link name="link">
+        <collision name="collision">
+          <geometry>
+            <plane>
+              <normal>0 0 20</normal>
+              <size>2500 2500</size>
+            </plane>
+          </geometry>
+          <surface>
+            <friction>
+              <ode>
+                <mu>1</mu>
+                <mu2>1</mu2>
+              </ode>
+            </friction>
+          </surface>
+        </collision>
+
+        <visual name="water">
+          <pose>0 0 -0.1 0 0 0</pose>
+          <cast_shadows>false</cast_shadows>
+          <geometry>
+            <plane>
+              <normal>0 0 1</normal>
+              <size>10000 10000</size>
+            </plane>
+          </geometry>
+          <material>
+            <script>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+              <name>Gazebo/SkyBlue</name>
+            </script>
+          </material>
+        </visual>
+
+      </link>
+    </model>
 
     <physics name='default_physics' default='0' type='ode'>
       <ode>

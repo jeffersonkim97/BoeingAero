@@ -1,0 +1,13 @@
+material beach_sand{
+    technique
+    {
+        pass
+        {
+            texture_unit
+            {
+                texture beach_sand.jpg
+                scale 1 1
+            }
+        }   
+    }
+}
