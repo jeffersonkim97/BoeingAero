@@ -1,0 +1,21 @@
+This is a documentation for ros/src/UAV
+
+To install ros melodic, see following link:
+http://wiki.ros.org/melodic/Installation
+
+File organization
+
+ros/src/UAV has total of four different folders.
+- Launch folder contains launch file. Launch file for SITL will be created later and will be placed under this folder. To launch any launch file, you type in terminal roslaunch UAV <filename>.
+
+- Model folder contains model files. Models are made out of sdf files which defines links and joints of gazebo model. Texture of the model can be defined in the Mesh subfolder, which may contain collada or STL files to manually define complex shape of the model itself. STL model can be created through openSCAD and Collada model can be created through Blender.
+
+Existing models:
+- beach_geograph: test model for geographic height map
+- beach1: modified heighmap model of Daytona Beach, FL
+- sea_turtle: Sea turtle model
+- UAV_Model1: SAILR UAV model
+
+- src folder contains ros Plugins. These Plugins are C++ codes. Later UAV Plugin will be imported for aerodynamic simulation.
+
+- Worlds folder contains gazebo world. These world files are the "backgrounds" of the gazebo simulation we will be using. Currently, the beach1 model is imported into gazebo world for our test flight.
